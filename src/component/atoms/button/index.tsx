@@ -7,7 +7,7 @@ const CustomButton: React.FC<Props> = ({
   size = 'medium',
   onClick,
   disabled = false,
-  label  
+  label
 }) => {
   return (
     <Button

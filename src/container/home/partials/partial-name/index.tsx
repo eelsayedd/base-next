@@ -1,27 +1,20 @@
-  import { RootState } from '@/store';
-  import { useSelector } from 'react-redux';
   import { Props } from './interface';
   import { FC } from 'react';
-
-  import {CustomButton} from '@atoms';
+  import {CustomButton,Typography} from '@atoms';
   import { useTranslation } from 'react-i18next';
   import useLanguage from '@/hooks/useLangauge';
-  // import { componentStyles } from './style';
-  // import useStyles from '@/hooks/useStyles';
-  // import { Theme,useTheme } from '@mui/material/styles';
+  import { componentStyles } from './style';
+  import useStyles from '@/hooks/useStyles';
   import { Box } from '@mui/material';
 
   const PartialName: FC<Props> = ({ changeTest }) => {
     const {t}= useTranslation()
-    const count = useSelector((state: RootState) => state.boot.lng);
     const {language ,changeLanguage}=useLanguage()
-    // const theme: Theme = useTheme(); // Explicitly typing theme here for clarity
-    // const styles = useStyles(componentStyles)(theme);
-          // <Box sx={styles.container}>
+    const styles = useStyles(componentStyles);
+
     return (
-      <Box>
-        <p>{t('welcome')} {language}</p>
-        <p> Number {count}</p>
+      <Box sx={styles.container}>
+        <Typography variant='h6'  component={'p'} >{t('welcome')} {language}</Typography>
         <CustomButton label='Change Test' onClick={() => changeTest(2)} />
         <CustomButton label='Change Arabic' onClick={() => changeLanguage('ar')} />
         <CustomButton label='Change English' onClick={() => changeLanguage('en')} />

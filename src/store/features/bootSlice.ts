@@ -3,13 +3,11 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // Define a type for the slice state
 interface BootState {
-  lng: string;
   test: number;
 }
 
 // Define the initial state using that type
 const initialState: BootState = {
-  lng: 'en',
   test: 0
 };
 

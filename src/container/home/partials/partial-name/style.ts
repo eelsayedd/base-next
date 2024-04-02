@@ -3,7 +3,6 @@ import { Theme, CSSObject } from '@mui/material/styles';
 export const componentStyles = (theme: Theme): Record<string, CSSObject> => ({
   container: {
     display: 'flex',
-    flexDirection: 'column',
     gap: 2,
     [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
