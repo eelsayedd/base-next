@@ -1,4 +1,4 @@
-// UserDTO.ts
+// userDTO.ts
 
 /**
  * Interface for creating a new user.
@@ -11,7 +11,6 @@ export interface CreateUserDTO {
     password: string; // Password for the user's account, stored securely.
     // Other properties such as 'firstName', 'lastName' could be added here.
   }
-  
   /**
    * Interface for updating an existing user's information.
    * This is used to update mutable user details post-account creation.
@@ -22,7 +21,6 @@ export interface CreateUserDTO {
     email?: string;    // New email address, if changed.
     // Add other updatable fields as optional, e.g., 'password', 'profilePictureUrl'.
   }
-  
   /**
    * Interface for the structure of a user object when fetched from the backend.
    * This is typically used in user profile displays or for admin purposes to view user details.
@@ -34,4 +32,3 @@ export interface CreateUserDTO {
     createdAt: Date;   // Timestamp of when the user account was created.
     // Additional fields such as 'lastLogin' might be included to track user activity.
   }
-  
